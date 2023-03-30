@@ -95,4 +95,13 @@ replay_pid*
 
 # .env
 .env
-.env.properties
+env.properties
+
+.classpath
+.project
+.settings/
+
+*.iml
+
+log/
+target/
