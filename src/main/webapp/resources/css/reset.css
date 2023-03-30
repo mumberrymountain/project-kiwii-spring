@@ -1,0 +1,71 @@
+/* 외부스타일 */
+*{ 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+a{ 
+    text-decoration: none; 
+    color: inherit; 
+}
+
+li{
+    list-style-type: none;
+}
+
+body{ 
+    overflow-x: hidden;
+    /* 가로 스크롤 표시하지 않음 */
+
+    /* font-family: "돋움"; 
+    font-size: 12px; */
+    /* background-color: red; */
+        /* font: style 또는 weight size family; 
+           축약형 코드에서는 순서를 지켜야함
+           font: bolid italic 12px "돋움";
+        */ 
+}
+
+.container::after{ 
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.center-align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-align{
+    display: flex;
+    align-items: center;
+}
+
+input{
+    border-radius: 5px;
+}
+
+input:focus{
+    outline: none;
+}
+
+button:focus{
+    outline: none;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+}
+
+.kiwii-button-default{
+    background-color: #9bce26;
+    border: 1px solid #8cba21;
+    border-radius: 5px;
+    color: white;
+    font-family: Noto Sans KR, sans-serif;
+    cursor: pointer;
+}

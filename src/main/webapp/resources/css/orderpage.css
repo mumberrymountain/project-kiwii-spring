@@ -1,0 +1,172 @@
+section{
+    width: 990px;
+    height: 1439px;
+    /* background-color: aliceblue; */
+
+    display: flex;
+    justify-content: space-between;
+}
+
+section>.order-info-box{
+    width: 594px;
+    height: max-content; /* 이후 max-content로 변경 */
+    /* background-color: antiquewhite; */
+    font-family: Noto Sans KR, sans-serif;
+}
+
+section>.payment-info-box{
+    width: 308px;
+    height: 1433px;
+    font-family: Noto Sans KR, sans-serif;
+
+    /* background-color: beige; */
+}
+
+.order-info-box>.order-info-header{
+    width: 100%;
+    height: 54px;
+
+    border-bottom: 1px solid #e5e8eb;
+    /* background-color: aquamarine; */
+}
+
+.order-info-box>.order-info-component{
+    width: 100%;
+    height: 118px;
+
+    border-bottom: 1px solid #e5e8eb;
+    display: flex;
+    /* background-color: coral; */
+    position: relative;
+}
+
+.order-info-component>.order-info-image-container{
+    width: 60px;
+    height: 87px;
+}
+
+.order-info-component>.order-info-title-author{
+    width: 472px;
+    height: 87px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.order-info-image-container>img{
+    width: 100%; height: 100%;
+}
+
+.order-info-title-author>p:nth-of-type(1){
+    font-weight: bold;
+}
+
+.order-info-title-author>p{
+    font-size: 15px;
+    text-indent: 20px;
+    line-height: 25px;
+}
+
+.order-info-component>.order-info-price{
+    position: absolute;
+    right: 0;
+}
+
+.payment-info-box>.payment-info-header{
+    width: 100%;
+    height: 50px;
+}
+
+.payment-info-box>.payment-info-body{
+    width: 100%;
+    height: max-content;
+    border: 1px solid #9bce26;
+}
+
+.payment-info-body>.order-total-price{
+    width: 100%;
+    height: 46px;
+    position: relative;
+}
+
+.order-total-price>.total-price{
+    position: absolute;
+    left: 5%;
+}
+
+.order-total-price>.total-price-input{
+    position: absolute;
+    right: 5%;
+}
+
+.payment-info-body>.payment-total-price{
+    width: 100%;
+    height: 58px;
+    border-bottom: 1px solid #9bce26;
+    background-color: #e8f8c7;
+}
+
+.payment-total-price>span{
+    text-indent: 10px;
+    font-size: 20px;
+    color: #7ca51d;
+}
+
+.payment-info-body>.payment-method{
+    width: 100%;
+    height: 361px;
+}
+
+.payment-method>.method-list{
+    margin: 10px;
+}
+
+.method-list>li{
+    margin-top: 10px;
+    font-family: Noto Sans KR, sans-serif;
+    font-size: 14px;
+}
+
+.method-list>li>label{
+    display: flex;
+    align-items: center;
+}
+
+.method-list>li>label>input{
+    margin-right: 7px;
+}
+
+.payment-info-box>.payment-agreement-wrap{
+    margin-top: 30px;
+    width: 100%;
+    height: 132px;
+
+    position: relative;
+}
+
+.payment-agreement-wrap>h2{
+    line-height: 40px;
+}
+
+.payment-agreement-wrap>label{
+    display: flex;
+    align-items: center;
+}
+
+.payment-agreement-wrap>label>.buy-agree{
+    width: 17px; height: 17px;
+}
+
+.payment-agreement-wrap>label>span{
+    text-indent: 7px;
+    font-weight: 500;
+}
+
+.payment-agreement-wrap>.payment-button{
+    width: 100%;
+    height: 50px;
+
+    position: absolute;
+    bottom: 0;
+}

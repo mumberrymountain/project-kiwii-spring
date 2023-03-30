@@ -1,0 +1,74 @@
+section{
+    width: 1110px;
+    height: 540px;
+}
+
+section>.idcheck-box{
+    width: 340px;
+    height: max-content;
+}
+
+.idcheck-box>.idcheck-header{
+    width: 100%;
+    height: 100px;
+}
+
+.idcheck-box>.idcheck-method{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #dddddd;
+
+    display: flex;
+}
+
+.idcheck-method>li{
+    width: 50%;
+    cursor: pointer;
+    color: #789d23;
+}
+
+.active{
+    border-bottom: 2px solid #8cba21;
+}
+
+.idcheck-input-wrap>.idcheck-input-box{
+    width: 100%;
+    height: 222px;
+}
+
+.idcheck-input-box-1>.idcheck-input-cellphone,
+.idcheck-input-box-2>.idcheck-input-email,
+.idcheck-input-box>.idcheck-input-name{
+    margin-top: 20px;
+    height: 86px;
+}
+
+.idcheck-input-cellphone>p,
+.idcheck-input-email>p,
+.idcheck-input-name>p{
+    margin: 7px 0;
+}
+
+.idcheck-input-cellphone>.cellphone,
+.idcheck-input-email>.email,
+.idcheck-input-name>.name{
+    width: 100%;
+    height: 46px;
+    font-size: 17px;
+    
+    border: 1px solid #dddddd;
+}
+
+.idcheck-input-wrap>.idcheck-button{
+    width: 100%;
+    height: 56px;
+}
+
+.idcheck-input-box-2{
+    width: 100%;
+    height: 222px;
+}
+
+.idcheck-input-wrap-2{
+    display: none;
+}

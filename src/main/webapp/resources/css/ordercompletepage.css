@@ -1,0 +1,125 @@
+section{
+    width: 952px;
+    height: 458px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    border: 1px solid #bbbbbb;
+    display: flex;
+    font-family: Noto Sans KR, sans-serif;
+}
+
+section>.order-complete-container{
+    width: 332px;
+    height: 100%;
+    background-color: #97aab7;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-complete-container>.bxs-check-circle-wrap{
+    width: 100%;
+    height: 75px;
+}
+
+.order-complete-container>h1{
+    margin-top: 20px;
+    color: white;
+}
+
+.bxs-check-circle-wrap>.bxs-check-circle:before{
+    font-size: 75px;
+    color: white;
+    display: block;
+}
+
+.order-complete-container>.ordered-book-list{
+    margin-top: 30px;
+    width: 268px;
+    height: max-content;
+    background-color: aliceblue;
+    border: 2px solid #b6c4cd;
+    border-radius: 4px;
+}
+
+.ordered-book-list>.ordered-book-component{
+    width: 100%;
+    height: 58px;
+    background-color: #849bab;
+    border-bottom: 1px solid #91a5b4;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8px;
+
+    position: relative;
+}
+
+.ordered-book-component>.ordered-book-title{
+    font-size: 15px;
+    color: white;
+}
+
+.ordered-book-component>.ordered-book-author{
+    color: #bbd1d8;
+}
+
+.ordered-book-component>.ordered-book-price{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #c8cdcb;
+}
+
+.ordered-book-list>.ordered-book-etc{
+    width: 264px;
+    height: 15px;
+    background-color: #768b9a;
+}
+
+.ordered-book-etc>span{
+    color: #9fb3c1;
+}
+
+.ordered-book-list>.ordered-book-total{
+    width: 100%;
+    height: 31px;
+    background-color: #849bab;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8px;
+    position: relative;
+}
+
+.ordered-book-total>.book-total-length{
+    color: #c8d1d8;
+}
+
+.ordered-book-total>.book-total-price{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+section>.go-to-mylibrary-container{
+    width: calc(100% - 332px);
+    height: 100%;
+}
+
+.go-to-mylibrary-container>#go-to-mylibrary-button{
+    width: 237px;
+    height: 74px;
+    font-size: 20px;
+    color: white;
+    background-color: #1f8ce6;
+    border: 1px solid #0077d9;
+    border-radius: 7px;
+}

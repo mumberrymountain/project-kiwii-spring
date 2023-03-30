@@ -1,0 +1,187 @@
+section{
+    width: 1100px;
+    
+}
+
+section>.search-result-banner{
+    width: 100%;
+    height: 122px;
+}
+
+.search-result-banner>h3{
+
+    font-size: 27px;
+    font-family: Noto Sans KR, sans-serif;
+}
+
+section>.search-genre-container{
+    width: 100%;
+    height: 53px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+}
+
+.search-genre-container>.search-genre{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    transition: 0.3s;
+    left: 0%;
+}
+
+.search-genre>li{
+    width: max-content;
+    padding: 15px 5px;
+    /* border: 1px solid black; */
+
+    font-size: 14px;
+    color: #B7BCBF;
+    font-family: Noto Sans KR, sans-serif;
+
+    cursor: pointer;
+}
+
+.search-genre>li:hover{
+    background-color: #f2f2f2;
+}
+
+/* select하고 있는 장르 */
+.search-genre>li.selected-genre{
+    color: #636c73;
+    font-weight: bold;
+    border-bottom: 3px solid #9EA7AD;
+}
+
+/* 왼쪽으로 가기 */
+.search-genre-container>.search-genre-prev{
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+
+    display: none;
+}
+
+.search-genre-prev>.bx-chevron-left{
+    font-size: 30px;
+}
+
+
+/* 오른쪽으로 가기 */
+.search-genre-container>.search-genre-next{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.search-genre-next>.bx-chevron-right{
+    font-size: 30px;
+}
+
+.search-type-wrap{
+    width: 100%; height: 43px;
+    position: relative;
+}
+
+.search-type-wrap>form>.search-type-select{
+    width: 93px; height: 34px;
+    font-family: Noto Sans KR, sans-serif;
+    font-weight: bold;
+    border: 1px solid #d1d5d9;
+    border-radius: 5px;
+
+    position: absolute;
+    bottom: 0;
+}
+
+.search-type-wrap>form>.search-type-select:focus{
+    outline: none;
+    background-color: #f2f2f2;
+}
+
+.search-list-wrap>.search-component-box{
+    width: 100%; height: 204px;
+    border-bottom: 2px solid #d1d5d9;
+
+    display: flex;
+    align-items: center;
+}
+
+.search-list-wrap>.search-component-box:last-child{
+	margin-bottom: 40px;
+}
+
+.search-component-box>.search-component-inner{
+    width: 100%; height: 156px;
+    display: flex;
+}
+
+.search-component-inner>.search-component-image{
+    width: 110px; height: 100%;
+    background-color: turquoise;
+}
+
+.search-component-image>a>img{
+    width: 100%; height: 100%;
+}
+
+.search-component-inner>.search-component-text{
+    width:  975px; height: 100%;
+    margin-left: 15px;
+}
+
+.search-component-text>p{
+    font-family: Noto Sans KR, sans-serif;
+    line-height: 26px;
+}
+
+.search-component-text>.search-title{
+    font-size: 15px;
+}
+
+.search-component-text>.search-author{
+    font-size: 15px;
+}
+
+.search-component-text>.search-publisher-genre{
+    font-size: 13px;
+    color: #808991;
+}
+
+.search-component-text>.search-intro{
+    font-size: 13px;
+}
+
+.search-component-text>.search-price{
+    font-size: 13px;
+    font-weight: bold;
+    color: #1f8cea;
+}
+
+.search-empty-box{
+	width: 100%;
+	height: 791px;
+}
+
+.search-empty-box>.search-empty-wrap{
+	width: 260px;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.search-empty-wrap>div>.bx-search{
+	font-size: 50px;
+	color: #e6e8eb;
+}
+
+.search-empty-wrap>p{
+	font-size: 14px;
+	font-family: Noto Sans KR, sans-serif;
+	color: #808991;
+}

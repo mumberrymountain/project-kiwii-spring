@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="c">
+	<select id = "cartCount" resultType = "int">
+		SELECT COUNT(*)
+		FROM songsongbooks.cart
+		WHERE memberId=#{id}
+	</select>
+	
+	<select id= "viewMyCartList" resultType="vo.CartVO">
+		SELECT c.id, c.bookId, b.image, b.title, b.author, b.sellprice
+	    FROM songsongbooks.cart c
+	    LEFT JOIN songsongbooks.books b ON c.bookId = b.id
+	    WHERE c.memberId = #{id}
+	</select>
+	
+	<select id = "cartDuplicationCheck" resultType="vo.CartVO">
+		SELECT * 
+		FROM songsongbooks.cart
+		WHERE memberId=#{id} and bookId=#{bookId}
+	</select>
+	
+	<insert id = "insertIntoMyCart" parameterType="java.util.HashMap">
+		INSERT INTO songsongbooks.cart VALUES(
+				null,
+				#{id},
+				#{bookId}
+		)		
+	</insert>
+	
+	<delete id = "deleteFromMyCart" parameterType="java.util.HashMap">
+		DELETE FROM songsongbooks.cart 
+		WHERE memberId = #{id} AND bookId = #{bookId}
+	</delete>
+	
+	<select id="goOrderPage" resultType="vo.CartVO">
+		SELECT c.id, c.bookId, b.image, b.title, b.author, b.sellprice
+		FROM songsongbooks.cart c
+		LEFT JOIN songsongbooks.books b ON c.bookId = b.id
+		WHERE c.bookId = #{bookId}
+		AND c.memberId = #{id}
+	</select>
+	
+	<insert id = "saveInLibrary" parameterType="java.util.HashMap">
+		INSERT INTO songsongbooks.library VALUES(
+			null,
+			#{id},
+			#{bookId}
+		)
+	</insert>
+	
+	<delete id = "deleteFromCart" parameterType="java.util.HashMap">
+		DELETE FROM songsongbooks.cart
+		WHERE memberId = #{id}
+		AND bookId = #{bookId}
+	</delete>
+	
+	<insert id = "saveInPayment" parameterType="vo.PaymentVO">
+		INSERT INTO songsongbooks.payment VALUES(
+			null,
+			#{id},
+			#{paymentdetail},
+			#{amount},
+			DEFAULT
+		)
+	</insert>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+

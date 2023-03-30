@@ -1,0 +1,103 @@
+section{
+    width: 957px;
+    height: 684px;
+}
+
+section>.mykiwii-container{
+    height: 664px;
+    display: flex;
+
+    position: relative;
+}
+
+.mykiwii-container>.mykiwii-menu{
+    width: max-content;
+    height: 100%;
+
+    /* background-color: #b1c8e2; */
+}
+
+.mykiwii-menu>ul{
+    margin-top: 50px;
+}
+
+.mykiwii-menu>ul>li{
+    font-family: Noto Sans KR, sans-serif;
+}
+
+.mykiwii-menu>ul>li:first-child{
+    font-size: 20px;
+    line-height: 60px;
+    color: black;
+}
+
+.mykiwii-menu>ul>.active{
+    color: #647f26;
+}
+
+.mykiwii-menu>ul>li{
+    line-height: 30px;
+    color: #808991;
+    font-weight: 600;
+}
+
+.mykiwii-container>.mykiwii-info-box{
+    width: max-content;
+    height: 186px;
+    border: 2px solid black;
+    display: flex;
+
+    position: absolute;
+    right: 15%;
+    top: 10%;
+}
+
+.mykiwii-info-box>.mykiwii-basicinfo{
+    width: 181px;
+    height: 100%;
+    padding: 10px;
+    background-color: #ecffc1;
+}
+
+.mykiwii-basicinfo>h3{
+    line-height: 25px;
+    font-family: Noto Sans KR, sans-serif;
+}
+
+.mykiwii-basicinfo>p{
+    line-height: 25px;
+    font-size: 12px;
+    color: #879198;
+    font-family: Noto Sans KR, sans-serif;
+}
+
+.mykiwii-info-box>.mykiwii-mylibrary{
+    width: 185px;
+    height: 100%;
+}
+
+.mykiwii-info-box>.mykiwii-mycart{
+    width: 185px;
+    height: 100%;
+}
+
+.mykiwii-info-box>.mykiwii-square-default{
+    position: relative;
+}
+
+.mykiwii-square-default>.bx{
+    font-size: 50px;
+    position: absolute;
+    top: 25%;
+}
+
+.mykiwii-square-default>h3{
+    position: absolute;
+    top: 55%;
+}
+
+.mykiwii-square-default>h2{
+    position: absolute;
+    top: 72%;
+    color: #9bce26;
+}

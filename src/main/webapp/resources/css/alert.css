@@ -1,0 +1,38 @@
+.alert-container{
+    position: fixed;
+    width:100%; height: 100%;
+    top:0; left:0; 
+    background-color: rgba(0, 0, 0, 0.515);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    z-index: 100;
+}
+
+.alert-popup{
+    width: 360px;
+    height: 187px;
+    border-radius: 15px;
+    position: relative;
+    font-family: 'Noto Sans KR', sans-serif;
+
+    background-color: white;
+}
+
+.alert-popup>.alert-text{
+    width: 100%;
+    height: 70%;
+    border-bottom: 1px solid #eaeaea;
+    text-align: center;
+}
+
+.alert-text>span{
+    margin: 0 13px;
+}
+
+.alert-popup>.popup-quit{
+    width: 100%;
+    height: 30%;
+    cursor: pointer;
+}

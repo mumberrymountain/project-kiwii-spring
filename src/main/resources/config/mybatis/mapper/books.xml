@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="b">
+	<select id = "bookToday" resultType= "vo.BookVO">
+		SELECT id, title, image 
+		FROM songsongbooks.books
+		WHERE booktoday=1
+		LIMIT 8
+	</select>
+
+	<select id = "newBook" resultType = "vo.BookVO">
+		SELECT id, title, image, author
+		FROM songsongbooks.books
+		ORDER BY publishdate DESC
+		LIMIT 18
+	</select>
+	
+	<select id = "bestSeller" resultType = "vo.BookVO">
+		SELECT id, title, image, author
+		FROM songsongbooks.books
+		ORDER BY sold DESC
+		LIMIT 18
+	</select>
+	
+	<select id = "bookCount" resultType = "int">
+		SELECT COUNT(*)
+		FROM songsongbooks.library
+		WHERE memberId=#{id}
+	</select>
+	
+	<select id = "bookView" resultType = "vo.BookVO">
+		SELECT *
+		FROM songsongbooks.books
+		WHERE id=#{id}
+	</select>
+	
+	<select id = "commentView" resultType = "vo.CommentVO">
+		SELECT *
+		FROM songsongbooks.comments
+		WHERE bookId=#{id}
+		ORDER BY ref ASC
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+

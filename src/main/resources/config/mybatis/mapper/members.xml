@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="m">
+	<select id = "login" resultType= "vo.MemberVO">
+		SELECT id, memId, memPwd 
+		FROM songsongbooks.members
+		WHERE memId=#{memId}
+	</select>
+	
+	<select id = "idCheck" resultType= "vo.MemberVO">
+		SELECT id, memId
+		FROM songsongbooks.members
+		WHERE memId=#{memId}
+	</select>
+	
+	<select id = "getMemName" resultType= "vo.MemberVO">
+		SELECT memName
+		FROM songsongbooks.members
+		WHERE id=#{id}
+	</select>
+	
+	<insert id="register" parameterType = "vo.MemberVO">
+		INSERT INTO songsongbooks.members VALUES(
+				null,
+				#{memId},
+				#{memPwd},
+				#{memName},
+				#{memEmail},
+				#{memCellNum},
+				#{memGender},
+				#{memBirth}
+		)
+	</insert>
+	
+	<select id="registerSuccess" resultType="vo.MemberVO">
+		SELECT memId, memName, memEmail
+		FROM songsongbooks.members
+		WHERE memId=#{memId}
+	</select>
+	
+	<select id="findIdByPhoneNumber" resultType="String">
+		SELECT memId 
+		FROM songsongbooks.members
+		WHERE memName=#{memName} and memCellNum=#{memCellNum}
+	</select>
+	
+	<select id="findIdByEmail" resultType="String">
+		SELECT memId 
+		FROM songsongbooks.members
+		WHERE memName=#{memName} and memEmail=#{memEmail}
+	</select>
+	
+	<select id="myPage" resultType="vo.MemberVO">
+		SELECT memId, memEmail
+		FROM songsongbooks.members
+		WHERE memId=#{memId}
+	</select>
+	
+	<select id="myPaymentSelect" resultType="vo.PaymentVO">
+		SELECT purchasedate, paymentdetail, amount
+		FROM songsongbooks.payment
+		WHERE memberId=#{id}
+	</select>
+	
+	<select id="pwdCheck" resultType="vo.MemberVO">
+		SELECT id, memId, memEmail, memName, memPwd
+		FROm songsongbooks.members
+		WHERE memId=#{memId}
+	</select>
+	
+	<update id="emailUpdate" parameterType = "java.util.HashMap">
+		UPDATE Members 
+		SET memEmail = #{memEmail}
+		WHERE memId = #{memId}
+	</update>
+	
+	<update id="pwdUpdate" parameterType = "java.util.HashMap">
+		UPDATE Members 
+		SET memPwd = #{memPwd}
+		WHERE memId = #{memId}
+	</update>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+

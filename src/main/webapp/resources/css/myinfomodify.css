@@ -1,0 +1,202 @@
+section{
+    width: 957px;
+    height: 684px;
+}
+
+section>.mykiwii-container{
+    height: 664px;
+    display: flex;
+
+    position: relative;
+}
+
+.mykiwii-container>.mykiwii-menu{
+    width: max-content;
+    height: 100%;
+
+    /* background-color: #b1c8e2; */
+}
+
+.mykiwii-menu>ul{
+    margin-top: 50px;
+}
+
+.mykiwii-menu>ul>li{
+    font-family: Noto Sans KR, sans-serif;
+}
+
+.mykiwii-menu>ul>li:first-child{
+    font-size: 20px;
+    line-height: 60px;
+    color: black;
+}
+
+.mykiwii-menu>ul>li{
+    line-height: 30px;
+    color: #808991;
+    font-weight: 600;
+}
+
+.mykiwii-menu>ul>.active{
+    color: #647f26;
+}
+
+.mykiwii-container>.security-password-check{
+    margin-top: 60px;
+    margin-left: 30px;
+    width: 300px;
+    height: max-content;
+}
+
+.security-password-check>h2{
+    line-height: 50px;
+}
+
+.security-password-check>p{
+    line-height: 30px;
+}
+
+.security-password-check>label>.security-check-pwd{
+    width: 220px;
+    height: 31px;
+    border: 1px solid #d1d5d9;
+    border-radius: 5px;
+}
+
+.security-password-check>label>.pwd-check-button{
+    width: 60px;
+    height: 30px;
+}
+
+.mykiwii-container>.info-modify-box{
+    margin-top: 50px;
+    margin-left: 70px;
+
+    width: 718px;
+    height: max-content;
+}
+
+.info-modify-box>h1{
+    line-height: 60px;
+}
+
+.info-modify-box>.info-modify-table{
+    width: 718px;
+    height: 509px;
+}
+
+.info-modify-table>.info-modify-name{
+    width: 100%;
+    height: 50px;
+    display: flex;
+
+    border-top: 1px solid #e6e8eb;
+    border-bottom: 1px solid #e6e8eb;
+}
+
+.info-modify-table>.info-modify-id{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    border-bottom: 1px solid #e6e8eb;
+}
+
+.info-modify-table>.info-modify-email{
+    width: 100%;
+    height: 118px;
+    display: flex;
+    border-bottom: 1px solid #e6e8eb;
+}
+
+.info-modify-table>.info-modify-pwd{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    border-bottom: 1px solid #e6e8eb;
+}
+
+.info-modify-header{
+    width: 25%;
+    height: 100%;
+    background-color: #f2f4f5;
+    position: relative;
+}
+
+.info-modify-header>p{
+    position: absolute;
+    right: 10%;
+}
+
+.info-modify-body{
+    width: 75%;
+    height: 100%;
+    text-indent: 10px;
+    position: relative;
+}
+
+.info-modify-body-email>p{
+    position: absolute;
+    top: 10%;
+}
+
+.info-modify-body-email>label{
+    position: absolute;
+    top: 40%;
+}
+
+.info-modify-body-email>label>input{
+    width: 220px;
+    height: 34px;
+    border: 1px solid #d1d5d9;
+    border-radius: 5px;
+}
+
+.info-modify-body-email>label>#email-change-button{
+    width: 85px;
+    height: 35px;
+    background-color: #7d8e9e;
+    border: 1px solid #636c73;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.info-modify-body-pwd>.current-pwd{
+    position: absolute;
+    top: 10%;
+}
+
+.info-modify-body-pwd>.new-pwd{
+    position: absolute;
+    top: 30%;
+}
+
+.info-modify-body-pwd>.new-pwd-verify{
+    position: absolute;
+    top: 50%;
+}
+
+.info-modify-body-pwd>.current-pwd>input,
+.info-modify-body-pwd>.new-pwd>input,
+.info-modify-body-pwd>.new-pwd-verify>input
+{
+    width: 220px;
+    height: 34px;
+    border: 1px solid #d1d5d9;
+    border-radius: 5px;
+}
+
+.info-modify-body-pwd>#pwd-change-button{
+    position: absolute;
+    left: 2%;
+    top: 70%;
+    width: 106px;
+    height: 30px;
+    background-color: #7d8e9e;
+    border: 1px solid #636c73;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}

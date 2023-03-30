@@ -1,0 +1,283 @@
+@font-face {
+    font-family: sunflower-medium;
+    src: url(../font/Sunflower-Medium.ttf);
+}
+
+body>*{
+    margin: auto;
+}
+
+hr{
+    border: 1px solid #F5F5F5;
+}
+
+.header-1-inner{
+    width: 1110px;
+    height: 39px;
+
+    position: relative;
+}
+
+.header-1-inner>.top-menu{
+    display: flex;
+    gap: 24px;
+}
+
+.header-1-inner>.login-register{
+    display: flex;
+    gap: 24px;
+
+    position: absolute;
+    right: 0;
+}
+
+.header-2-inner{
+    width: 1110px;
+    height: 100%;
+}
+
+.h-inner-1stLayer{
+    width: 100%;
+    height: 87px;
+    position: relative;
+}
+
+.h-inner-1stLayer>.header-logo{
+    width: 190px;
+    height: 65px;
+    position: absolute;
+    left: 5%;
+}
+
+.h-inner-1stLayer>.header-logo>a{
+    font-family: sunflower-medium;
+    font-size: 40px;
+    color: black;
+    width: 100%; height: 100%;
+}
+
+.header-logo>a>img{
+    width: 100%; height: 100%;
+}
+
+.h-inner-1stLayer>.member-menu{
+    width: max-content;
+    height: max-content;
+
+    position: absolute;
+    right: 0;
+
+    display: flex;
+    gap: 20px;
+}
+
+.h-inner-2ndLayer{
+    width: 100%;
+    height: 40px;
+
+    position: relative;
+}
+
+/* 세부 디자인 */
+.top-menu>li,
+.login-register>li{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #696b6b;
+    font-weight: bold;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.login-register>li:first-child>a{
+    color: #72971b;
+}
+
+.top-menu>li:hover,
+.login-register>li:hover{
+    opacity: 0.5;
+}
+
+.h-inner-1stLayer>form>.search-wrap{
+    width: 400px;
+    height: 38px;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 테스트용 */
+.h-inner-2ndLayer>.category{
+    position: absolute;
+    left: 5%;
+    top: 1%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 17px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.category>li>.category-icon{
+    width: 120px;
+    height: 40px;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.category>li:hover .category-inner{
+    display: block;
+}
+
+.category>li>.category-icon>.bx-menu{
+    font-size: 30px;
+}
+
+.category>li>.category-inner{
+    width: 200px;
+    height: max-content;
+    /* overflow-y: scroll; */
+    display: none;
+
+    background-color: white;
+    border-top: 1px solid #DDDDDD;
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.category-inner>li>.category-main{
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+.category-inner>li>.category-main:hover{
+    background-color: #f7f7f7;
+    color: #6d8731;
+    font-weight: bold;
+}
+
+.category-inner>li:hover>.inner-submenu{
+    display: block;
+}
+
+.category-main>a>.bx-chevron-right{
+    position: absolute;
+    left: 80%;
+    font-size: 22px;
+} 
+
+.category-inner>li>.inner-submenu{
+    width: 220px;
+    height: 657px;
+    position: absolute;
+    top: 6%;
+    left: 100%;
+    overflow-y: scroll;
+    background-color: #f7f7f7;
+    display: none;
+}
+
+.category-inner>li>.inner-submenu>li{
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+.inner-submenu>li:hover>a{
+    color:#6d8731;
+}
+
+.search-wrap>.search-icon-wrap{
+    width: 20px;
+    height: 100px;
+    background-color: purple;
+}
+
+.search-wrap>.hSearch{
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid #9bce26;
+    border-radius: 7px;
+
+    font-size: 17px;
+}
+
+.search-wrap>.search-erase-wrap{
+    position: absolute;
+    top: 0;
+    right: 8%;
+    width: 40px;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    display: none;
+}
+
+.search-erase-wrap>.bx-x{
+    font-size: 22px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.search-wrap>.search-label{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.search-label>.search-button{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.h-inner-1stLayer>.member-menu>li>a>span{
+    font-size: 30px;   
+}
+
+.h-inner-1stLayer>.member-menu>#go-mycart-page{
+    cursor: pointer;
+}
+
+.h-inner-1stLayer>.member-menu>#go-mypage{
+    cursor: pointer;
+}
+
+.h-inner-1stLayer>.member-menu>#go-mycart-page>span,
+.h-inner-1stLayer>.member-menu>#go-mypage>span{
+    font-size: 30px;   
+}
+
+
+.h-inner-2ndLayer>.category{
+    gap: 8px;
+}
+
+.h-inner-2ndLayer>.category>span{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #696b6b;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.h-inner-2ndLayer>.category>.bx-menu{
+    font-size: 30px;
+}
+
+#logout{
+    cursor: pointer;
+}

@@ -1,0 +1,39 @@
+section{
+    width: max-content;
+    /* width: 402px; */
+    height: 670px;
+
+    /* background-color: antiquewhite; */
+
+    display: flex;
+    position: relative;
+}
+
+section>.page-notfound-container{
+    width: 100%;
+    height: 280px;
+
+    /* background-color: rgb(166, 205, 205); */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.bxs-error-circle{
+    font-size: 120px;
+    color: #d9d9d9;
+}
+
+.page-notfound-container>h2{
+    color: #666666;
+    line-height: 60px;
+    font-family: Noto Sans KR, sans-serif;
+}
+
+.page-notfound-container>h3{
+    color: #b5b5b5;
+    line-height: 30px;
+    font-family: Noto Sans KR, sans-serif;
+}
