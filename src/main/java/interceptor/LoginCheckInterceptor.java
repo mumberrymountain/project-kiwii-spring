@@ -19,9 +19,11 @@ public class LoginCheckInterceptor implements HandlerInterceptor {
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
+		
 		HashMap<String, Object> loginInfo = getLoginInfo(request);
-		loggedInGuard(handler, loginInfo);
-		notLoggedInGuard(handler, loginInfo);
+		 
+		// loggedInGuard(handler, loginInfo);
+		// notLoggedInGuard(handler, loginInfo);
 		
 		return true;
 	}
@@ -31,7 +33,8 @@ public class LoginCheckInterceptor implements HandlerInterceptor {
 			ModelAndView modelAndView) throws Exception {
 		HashMap<String, Object> loginInfo = getLoginInfo(request);
 		
-		modelAndView.addObject("loginInfo", loginInfo);
+		if(loginInfo == null) modelAndView.addObject("loginInfo", false);
+		else modelAndView.addObject("loginInfo", true);
 	}
 	
 	public HashMap<String, Object> getLoginInfo(HttpServletRequest request){
@@ -73,7 +76,8 @@ public class LoginCheckInterceptor implements HandlerInterceptor {
 	
 	private void loggedInGuard(Object handler, HashMap<String, Object> loginInfo) {
 		boolean loggedInGuard = checkLoggedInAnnotation(handler, LoggedInGuard.class);
-		if(loggedInGuard) {
+		
+		if(loggedInGuard == true) {
 			if(loginInfo == null) {
 				throw new BusinessException(ErrorCode.FORBIDDEN, "로그인하지 않은 상태에서 진입 시도");
 			}
@@ -82,7 +86,7 @@ public class LoginCheckInterceptor implements HandlerInterceptor {
 	
 	private void notLoggedInGuard(Object handler, HashMap<String, Object> loginInfo) {
 		boolean notLoggedInGuard = checkNotLoggedInAnnotation(handler, NotLoggedInGuard.class);
-		if(notLoggedInGuard) {
+		if(notLoggedInGuard == true) {
 			if(loginInfo != null) {
 				throw new BusinessException(ErrorCode.FORBIDDEN, "로그인하지 않은 상태에서 진입 시도");
 			}

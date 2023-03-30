@@ -6,7 +6,7 @@
 <html lang="ko">
 	<body>
 		<header class="header-1-inner vertical-align">
-			<c:if test="${loginInfo eq null }">
+			<c:if test="${loginInfo ne true }">
 	        	<ul class="login-register">
 	            	<li><a href="http://localhost:9095/members/register">회원가입</a></li>       
 	            	<li><a href="http://localhost:9095/members/login">로그인</a></li>
@@ -14,7 +14,7 @@
 	        	</ul>
 	    	</c:if>
 	    	
-	    	<c:if test="${loginInfo ne null }">
+	    	<c:if test="${loginInfo eq true }">
 	    		<ul class="login-register">     
 		            <li><a href="http://localhost:9095/members/logout">로그아웃</a></li>
 	                <li><a href="#">고객센터</a></li>

@@ -18,7 +18,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap" rel="stylesheet">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-        <link rel="shortcut icon" type="image/x-icon" href="resources/img/kiwii_head_icon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="/img/kiwii_head_icon.ico">
     </head>
 
     <body>
